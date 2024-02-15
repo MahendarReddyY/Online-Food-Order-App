@@ -3,7 +3,8 @@ package main
 import "fmt"
 
 var cartChoice int
-var cartSelection []int
+
+//var cartSelection []int
 var pricemap = map[int]int{1: 2, 2: 3, 3: 4}
 var totals = []int{}
 

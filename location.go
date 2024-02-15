@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-func Place(location string) string {
+func Place(location string) {
 	for {
 		fmt.Println("Enter the Location or Area Code")
 		fmt.Scanln(&location)
@@ -21,6 +21,5 @@ func Place(location string) string {
 			fmt.Printf("Sorry! our store is not in your %v location.\n", loc)
 			main()
 		}
-		return loc
 	}
 }
