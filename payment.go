@@ -14,6 +14,7 @@ func payment() {
 	total := sum(totals)
 	fmt.Println("Total Price is:", total)
 	// Calculate change
+	Promo()
 	change = PaidAmount - total
 	fmt.Println("Take your change:", change)
 

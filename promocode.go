@@ -5,12 +5,12 @@ import (
 )
 
 var promo string
-var codemap []string
 var code int
 var finalPrice float32
 var finalp int
 
 func Promo() {
+	var codemap = []string{}
 	codemap[0] = "DF345TK"
 	codemap[1] = "E1QN8W"
 	fmt.Println("Enter a Promo Code Here:")
@@ -23,10 +23,11 @@ func Promo() {
 	if promo == codemap[code] {
 		fmt.Println("Promocode applied sucessfully")
 		fmt.Println("The final amount is:")
-		//finalp = strconv.AppendFloat(total * .50, 2)
-		//finalPrice = finalp
-		fmt.Println("Now you can see the final price of the order")
+		finalp = (total * 50)
+		finalPrice = float32(finalp / 100)
+		fmt.Println("Now you can see the final price of the order", finalPrice)
 	} else {
-		fmt.Println("invalid Copuon code:")
+		fmt.Println("In valid Promo code ad your total cart price is :", total)
+		receipt()
 	}
 }
