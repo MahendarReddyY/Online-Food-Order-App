@@ -6,19 +6,22 @@ import (
 
 var PaidAmount int
 var change int
+var Total int
 
 func payment() {
 	fmt.Println("Welcome to the Payment Gate way")
 	fmt.Println("Amount paid:")
 	fmt.Scanln(&PaidAmount)
-	total := sum(totals)
-	fmt.Println("Total Price is:", total)
+	Total = sum(totals)
+	fmt.Println("Total Price is:", Total)
+
 	// Calculate change
-	Promo()
-	change = PaidAmount - total
+	change = PaidAmount - Total
 	fmt.Println("Take your change:", change)
 
-	go receipt()
+	Promo()
+
+	receipt()
 
 }
 
