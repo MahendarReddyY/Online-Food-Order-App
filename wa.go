@@ -5,14 +5,15 @@ import (
 	"os"
 )
 
-var location string
+//var location string
 
 //var wg = sync.WaitGroup{}
 
 func main() {
 	fmt.Println("Welcome to the WhatABurger!!...we make the fresh burgers")
-	Place(location)
-	Nyc()
+	//loc2()
+	Place()
+	//Nyc()
 }
 
 func California() {

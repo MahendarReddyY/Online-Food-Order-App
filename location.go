@@ -5,21 +5,29 @@ import (
 	"strings"
 )
 
-func Place(location string) {
-	for {
-		fmt.Println("Enter the Location or Area Code")
-		fmt.Scanln(&location)
-		loc := strings.ToUpper(location)
-		switch loc {
-		case "Newyork", "940":
-			fmt.Printf("Thanks for choosing this %v location\n", loc)
+var spot = map[string]string{
+	"1": "Dallas",
+	"2": "Newyork",
+	"3": "Washington Dc",
+	"4": "NewJersey",
+}
+var location string
+
+func Place() {
+	fmt.Println("Our locations are Dallas, Newyork, Washington Dc, NewJersey")
+	fmt.Println("Enter the Location:")
+	fmt.Scanln(&location)
+	location = strings.ToLower(strings.TrimSpace(location))
+
+	var found bool
+	for _, value := range spot {
+		if strings.ToLower(value) == location {
+			fmt.Printf("Thanks for choosing  %s \n", value)
+			found = true
 			California()
-		case "California", "920":
-			fmt.Printf("Thanks for choosing this %v location", loc)
-			Nyc()
-		default:
-			fmt.Printf("Sorry! our store is not in your %v location.\n", loc)
-			main()
 		}
+	}
+	if !found {
+		fmt.Println("Location not found.")
 	}
 }

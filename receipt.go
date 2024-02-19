@@ -18,4 +18,6 @@ func receipt() {
 	fmt.Println("Promocode Applied", promo)
 	fmt.Println("The final price of the item after promocode Applied:", Finalp)
 	fmt.Println("updated Retrun change :", change2)
+
+	Place()
 }
