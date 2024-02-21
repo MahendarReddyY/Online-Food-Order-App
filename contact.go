@@ -17,7 +17,6 @@ func Message(selection int) {
 
 		if selection > 3 {
 			fmt.Println("There is no option", selection, "choose an option from 1 to 3")
-			//loc2()
 			Place()
 		}
 		California()
