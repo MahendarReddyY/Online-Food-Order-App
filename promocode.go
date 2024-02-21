@@ -2,11 +2,10 @@ package main
 
 import (
 	"fmt"
+	"strings"
 )
 
 var promo string
-
-var code []string
 
 // var finalPrice float32
 var Finalp int
@@ -18,6 +17,26 @@ var change2 float32
 func Promo() {
 	fmt.Println("Enter a Promo Code Here:")
 	fmt.Scanln(&promo)
+
+	location = strings.ToLower(strings.TrimSpace(promo))
+
+	var found bool
+	for _, value := range codemap {
+		if strings.ToLower(value) == promo {
+			fmt.Printf("Promocode  %s applied \n", value)
+			found = true
+			Finalp = (Total * 50) / 100
+			//finalPrice = float32(finalp / 100)
+			change2 = float32(PaidAmount) - float32(Finalp)
+			fmt.Printf("Price after Discount: %v \n and remaining balance of order: %v \n ", Finalp, change2)
+		}
+	}
+	if !found {
+		fmt.Println("Invalid Promocode.")
+	}
+}
+
+/*
 	if len(codemap) > 0 {
 		for _, ok := range codemap {
 			code = append(code, ok)
@@ -39,3 +58,4 @@ func Promo() {
 	}
 	//code = append(code, ok)
 }
+*/

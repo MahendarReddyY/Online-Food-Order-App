@@ -21,6 +21,8 @@ func payment() {
 
 	Promo()
 
+	input()
+
 	receipt()
 
 }

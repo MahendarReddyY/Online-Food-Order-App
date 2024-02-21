@@ -24,8 +24,6 @@ func input() {
 	fmt.Println("Enter number your address:")
 	fmt.Scanln(&Address)
 
-	receipt()
-
 }
 
 /*
