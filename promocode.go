@@ -18,7 +18,7 @@ func Promo() {
 	fmt.Println("Enter a Promo Code Here:")
 	fmt.Scanln(&promo)
 
-	location = strings.ToLower(strings.TrimSpace(promo))
+	//location = strings.ToLower(strings.TrimSpace(promo))
 
 	var found bool
 	for _, value := range codemap {

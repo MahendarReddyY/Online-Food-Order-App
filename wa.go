@@ -11,9 +11,10 @@ import (
 
 func main() {
 	fmt.Println("Welcome to the WhatABurger!!...we make the fresh burgers")
+	Data()
 	//loc2()
 	Place()
-	//Nyc()
+	California()
 }
 
 func California() {
