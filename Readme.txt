@@ -28,3 +28,7 @@ In new version:
   -   If no match occured displays the previous prices only 
 
 2) At the end I printed the receipt it will get the details of the summary of your order
+
+Database Connectivity:
+
+I have use the Go database drivers like JDBC connection in java to connect the local database to store the data and used for the further operations.
